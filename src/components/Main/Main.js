@@ -3,20 +3,36 @@ import './Main.scss';
 import SearchInput from "./../SearchInput/SearchInput";
 import axios from "axios";
 
-function Main(props) {
+function Main() {
 
-    const [receivedDataFromSubmit, setData] = useState('')
+    const [tracks, setTracks] = useState([]);
 
-    const submitDataReceivedHandler =(submittedData)=>{
-        console.log('submittedData--------->',submittedData);
-        setData(JSON.stringify(submittedData))
-    }
+    const handleSubmit = (query) => {
+        console.log('Search query:', query);
+        axios.get(`/api/ws/1.1/track.search?apikey=4190e8f472c2f669cdde2b7919522fd3&q=${query}`)
+            .then(response => {
+                console.log(response.data);
+                setTracks(response.data.message.body.track_list);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    };
 
     return(
         <div className="main" >
-            <SearchInput onSubmitData={submitDataReceivedHandler}></SearchInput>
-            {receivedDataFromSubmit ? JSON.stringify(receivedDataFromSubmit) : 'No data'}
-            {!receivedDataFromSubmit && <p>No data</p>}
+            <SearchInput onSubmit={handleSubmit}></SearchInput>
+            <div className="search-results">
+                <ul className="search-results__list">
+                    {tracks.map(track => (
+                        <li key={track.track.track_id} className="search-results__list-item">
+                            <div className="search-results__list-desc">{track.track.track_name}</div>
+                            <div className="search-results__list-desc">Artist: {track.track.artist_name}</div>
+                            <div className="search-results__list-desc">Album: {track.track.album_name}</div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }
