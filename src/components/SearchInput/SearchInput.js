@@ -28,6 +28,7 @@ function SearchInput() {
                        type="text"
                        className="search-form__input"
                        placeholder="Enter song / album / artist"
+                       autoComplete="off"
                        value={query}
                        onChange={handleInputChange}/>
             </label>
