@@ -1,0 +1,15 @@
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+    app.use(
+        '/api',
+        createProxyMiddleware({
+            target: 'https://api.musixmatch.com',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/api': '',
+            }
+            // logLevel: 'debug'
+        })
+    );
+};

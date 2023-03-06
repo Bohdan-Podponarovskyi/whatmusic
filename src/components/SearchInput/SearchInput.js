@@ -8,7 +8,7 @@ function SearchInput() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        axios.get(`https://api.musixmatch.com/ws/1.1/track.search?apikey=4190e8f472c2f669cdde2b7919522fd3&q_artist=${query}`)
+        axios.get(`/api/ws/1.1/track.search?apikey=4190e8f472c2f669cdde2b7919522fd3&q_artist=${query}`)
             .then(response => {
                 console.log(response.data);
             })
