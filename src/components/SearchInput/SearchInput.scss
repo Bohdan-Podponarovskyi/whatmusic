@@ -6,11 +6,10 @@
   width: 75vw;
   position: absolute;
   margin: auto;
-  top: 0; left: 0; bottom: 0; right: 0;
-
-  &__bg-nails {
-      display: none;
-  }
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 
   &__input {
     width: 69.4vw;
@@ -20,13 +19,18 @@
     border: none;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    //z-index: 4;
-    //color: black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     font-family: 'Yomogi', cursive;
     font-weight: 400;
     font-size: 3vw;
     line-height: 4vw;
+
+    &::placeholder {
+      text-align: center;
+    }
 
     &-label {
       width: 100%;
@@ -37,7 +41,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
-      //z-index: -1;
       opacity: 0.9;
 
       &:before {
@@ -53,8 +56,6 @@
         mix-blend-mode: darken;
       }
     }
-
-
   }
 
   &__button {
@@ -67,9 +68,7 @@
     background-size: cover;
     position: relative;
     font-family: 'Zen Dots', cursive;
-    //z-index: -2;
     margin-top: 5vw;
-
 
     &-text {
       margin: auto;
@@ -96,9 +95,6 @@
       box-shadow: 0.828028px 0.828028px 2.98483px #323A65, -0.828028px -0.828028px 3.98px rgba(218, 105, 0, 0.4);
       border-radius: 100px;
       mix-blend-mode: darken;
-      //z-index: -1;
     }
-
   }
-
 }
