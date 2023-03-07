@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import './Menu.scss';
 
-function Menu() {
+function Menu(props) {
 
-    return(
+    const handleClick = (event) => {
+        event.preventDefault();
+        props.onClickTopTen(true);
+    };
+
+    console.log('menu', props.isTopTen)
+
+    return (
         <nav className="menu">
-            <a href="/" className="menu__link">top-10</a>
+            <a href="/" className="menu__link" onClick={handleClick}>top-10</a>
         </nav>
     )
 }

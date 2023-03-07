@@ -1,23 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import "./styles/reset.scss";
 import "./styles/variables.scss";
 import "./styles/general.scss";
-import BgNails from "./components/BgNails/BgNails";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
+import Layout from "./components/layout/Layout/Layout";
+import Home from "./components/layout/Home/Home";
+import TopTen from "./components/layout/TopTen/TopTen";
 
 
-function App() {
-
+const App = () => {
   return (
-    // <div className="App">
-    //   <BgNails></BgNails>
-    //   <Header></Header>
-    //   <Main></Main>
-    // </div>
-
+      <Router>
+          <Routes>
+              <Route exact path="/" element={<Layout><Home /></Layout>} />
+              <Route path="/top-10" element={<Layout><TopTen /></Layout>} />
+          </Routes>
+      </Router>
 
   );
 }

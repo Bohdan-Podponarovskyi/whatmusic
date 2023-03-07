@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import './Main.scss';
-import SearchInput from "./../SearchInput/SearchInput";
+import './Home.scss';
+import SearchInput from "../../SearchInput/SearchInput";
 import axios from "axios";
 
-function Main() {
+function Home() {
 
     const [tracks, setTracks] = useState([]);
 
@@ -37,4 +37,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default Home;

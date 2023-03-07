@@ -12,7 +12,7 @@ const SearchInput = (props) => {
 
     const handleInputChange = (event) => {
         setQuery(event.target.value);
-    }
+    };
 
     return (
         <form method="get" className="search-form" onSubmit={handleSubmit}>

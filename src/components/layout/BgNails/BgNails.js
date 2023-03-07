@@ -1,5 +1,5 @@
 import React from "react";
-import bg_nail from './../../img/bg_nail.png';
+import bg_nail from '../../../img/bg_nail.png';
 import './BgNails.scss';
 
 function BgNails() {
