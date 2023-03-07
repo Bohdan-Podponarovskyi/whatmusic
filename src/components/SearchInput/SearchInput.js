@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './SearchInput.scss';
-import axios from 'axios';
 
 
 const SearchInput = (props) => {
