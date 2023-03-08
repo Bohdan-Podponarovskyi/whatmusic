@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import BgNails from "../BgNails/BgNails";
 import Header from "../Header/Header";
-import Menu from "../../Menu/Menu";
-import TopTen from "../TopTen/TopTen";
-// import  from "../../Menu/Menu";
+import TopTenButton from "../../TopTenButton/TopTenButton";
+import TopTenResults from "../TopTenResults/TopTenResults";
+// import  from "../../TopTenButton/TopTenButton";
 
 
 function Layout({ children }) {
@@ -15,9 +15,9 @@ function Layout({ children }) {
         <div>
             <BgNails />
             <Header isTopTen={isTopTen} setIsTopTen={setIsTopTen}>
-                <Menu onClickTopTen={(value) => setIsTopTen(value)} />
+                <TopTenButton onClickTopTen={(value) => setIsTopTen(value)} />
             </Header>
-            <TopTen isTopTen={isTopTen} setIsTopTen={setIsTopTen}/>
+            <TopTenResults isTopTen={isTopTen} setIsTopTen={setIsTopTen}/>
             {children}
         </div>
     );

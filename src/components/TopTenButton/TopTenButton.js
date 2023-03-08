@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import './Menu.scss';
+import './TopTenButton.scss';
 
-function Menu(props) {
+function TopTenButton(props) {
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -17,4 +17,4 @@ function Menu(props) {
     )
 }
 
-export default Menu;
+export default TopTenButton;

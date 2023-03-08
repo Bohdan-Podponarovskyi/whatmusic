@@ -6,7 +6,7 @@ import "./styles/variables.scss";
 import "./styles/general.scss";
 import Layout from "./components/layout/Layout/Layout";
 import Home from "./components/layout/Home/Home";
-import TopTen from "./components/layout/TopTen/TopTen";
+import TopTenResults from "./components/layout/TopTenResults/TopTenResults";
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <Router>
           <Routes>
               <Route exact path="/" element={<Layout><Home /></Layout>} />
-              <Route path="/top-10" element={<Layout><TopTen /></Layout>} />
+              <Route path="/top-10" element={<Layout><TopTenResults /></Layout>} />
           </Routes>
       </Router>
 

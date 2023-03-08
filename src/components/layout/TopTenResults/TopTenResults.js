@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import './TopTen.scss';
-// import Menu from "../../Menu/Menu";
+import './TopTenResults.scss';
+// import TopTenButton from "../../TopTenButton/TopTenButton";
 
-const TopTen = (props) => {
+const TopTenResults = (props) => {
     const [topTenTracks, setTopTenTracks] = useState([]);
 
     console.log('top-ten', props.isTopTen);
@@ -22,9 +22,9 @@ const TopTen = (props) => {
     };
 
     return (
-        <div className="search-results">
+        <div className="search-results__top-ten">
             <button onClick={handleClick}>Get Top Ten Tracks</button>
-            <ul className="search-results__list top-ten" id="searchResults">
+            <ul onClick={handleClick} className="search-results__list top-ten" id="searchResults">
                 {topTenTracks.map(track => (
                     <li key={track.track.track_id} className="search-results__list-item">
                         <div className="search-results__list-desc">{track.track.track_name}</div>
@@ -37,4 +37,4 @@ const TopTen = (props) => {
     );
 }
 
-export default TopTen;
+export default TopTenResults;
