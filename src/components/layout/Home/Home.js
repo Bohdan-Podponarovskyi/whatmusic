@@ -10,7 +10,7 @@ function Home() {
 
     const handleReceivedData = (query) => {
         console.log('Search query:', query);
-        axios.get(`/api/ws/1.1/track.search?apikey=4190e8f472c2f669cdde2b7919522fd3&q_track=${query}&page_size=10&page=5&s_track_rating=desc`)
+        axios.get(`/api/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=5&s_track_rating=desc`)
             .then(response => {
                 console.log('tracks', response.data);
                 setTracks(response.data.message.body.track_list);
@@ -18,7 +18,7 @@ function Home() {
             .catch(error => {
                 console.log(error);
             });
-        axios.get(`/api/ws/1.1/track.search?apikey=4190e8f472c2f669cdde2b7919522fd3&q_artist=${query}&page_size=10&page=5&s_track_rating=desc`)
+        axios.get(`/api/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_artist=${query}&page_size=10&page=5&s_track_rating=desc`)
             .then(response => {
                 console.log('artist',response.data);
                 setArtist(response.data.message.body.track_list);

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import './Header.scss';
 import Logo from "../../Logo/Logo";
 import TopTenButton from "../../TopTenButton/TopTenButton";
@@ -9,7 +10,8 @@ function Header(props) {
     return(
         <div className="header">
             <Logo></Logo>
-            <TopTenButton isTopTen={props.isTopTen} onClickTopTen={(value) => props.setIsTopTen(value)}></TopTenButton>
+            <TopTenButton />
+            {/*<TopTenButton isTopTen={props.isTopTen} onClickTopTen={(value) => props.setIsTopTen(value)}></TopTenButton>*/}
             {/*{props.isTopTen}*/}
         </div>
     )

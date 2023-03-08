@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './TopTenButton.scss';
 
 function TopTenButton(props) {
@@ -12,7 +13,8 @@ function TopTenButton(props) {
 
     return (
         <nav className="menu">
-            <a href="/" className="menu__link" onClick={handleClick}>top-10</a>
+            <Link to={`/top-10`} className="menu__link">top-10</Link>
+            {/*<a href="/" className="menu__link" onClick={handleClick}>top-10</a>*/}
         </nav>
     )
 }
