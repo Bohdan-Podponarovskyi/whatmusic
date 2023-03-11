@@ -1,27 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import "./styles/reset.scss";
 import "./styles/variables.scss";
 import "./styles/general.scss";
-import Layout from "./components/layout/Layout/Layout";
-import Home from "./components/layout/Home/Home";
+import BgNails from "./components/layout/BgNails/BgNails";
+import Main from "./components/layout/Main/Main";
+import Home from "./components/pages/Home/Home";
 import Header from "./components/layout/Header/Header";
-import TopTenResults from "./components/layout/TopTenResults/TopTenResults";
-// import {Provider} from "./AppContext";
-
+import SearchInput from "./components/elements/SearchInput/SearchInput";
+import TopTenResults from "./components/pages/TopTenResults/TopTenResults";
+import SearchResults from "./components/pages/SearchResults/SearchResults";
 
 const App = () => {
+    // const [tracksResults, setTracksResults] = useState([]);
+
+
+
   return (
-      // <Provider>
           <Router>
-              <Header></Header>
-              <Routes>
-                  <Route exact path="/" element={<Layout><Home /></Layout>} />
-                  <Route path="/top-10" element={<Layout><TopTenResults /></Layout>} />
-              </Routes>
+              <BgNails />
+              <Header />
+              <Main>
+                  <Routes>
+                      <Route exact path="/" element={<Home />} />
+                      <Route exact path="/top-10" element={<TopTenResults />} />
+                      <Route exact path="/search" element={<SearchResults />} />
+                  </Routes>
+              </Main>
           </Router>
-      // </Provider>
   );
 }
 

@@ -1,0 +1,111 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &__input {
+    width: 69.4vw;
+    height: 6.25vw;
+    background: #DFE0E4;
+    border-radius: 20px;
+    border: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-family: 'Yomogi', cursive;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 4vw;
+
+    &::placeholder {
+      text-align: center;
+    }
+
+    &-label {
+      width: 100%;
+      height: 10.5vw;
+      padding: 30px 42px;
+      border-radius: 2.083vw;
+      background-image: url("../../../img/search_input_bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      opacity: 0.9;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90.97deg, rgba(9, 22, 63, 0.8) 12.17%, rgba(24, 46, 111, 1) 85.96%);
+        box-shadow: 0.828028px 0.828028px 2.98483px #323A65, -0.828028px -0.828028px 3.98px rgba(218, 105, 0, 0.4);
+        border-radius: 2.083vw;
+        mix-blend-mode: darken;
+      }
+    }
+  }
+
+  &__button {
+    min-width: 9vw;
+    min-height: 9vw;
+    border: none;
+    border-radius: 100px;
+    background-image: url("../../../img/search_button_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Zen Dots', cursive;
+    margin-top: 5vw;
+
+    &-text {
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;;
+      transform: translate(-50%, -50%);
+      font-weight: 400;
+      font-size: 1.875vw;
+      line-height: 2.22vw;
+      color: #DFE0E4;
+      z-index: 2;
+      vertical-align: middle;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(49deg, rgba(9, 22, 63, 0.8) 50.17%, rgba(24, 46, 111, 1) 150.96%);
+      box-shadow: 0.828028px 0.828028px 2.98483px #323A65, -0.828028px -0.828028px 3.98px rgba(218, 105, 0, 0.4);
+      border-radius: 100px;
+      mix-blend-mode: darken;
+    }
+  }
+}
+
+.search-results {
+  font-size: 30px;
+  background-color: white;
+  overflow-y: auto;
+  font-family: 'Zen Dots', cursive;
+
+  &__list-item:nth-child(even) {
+    background-color: aqua;
+  }
+}
