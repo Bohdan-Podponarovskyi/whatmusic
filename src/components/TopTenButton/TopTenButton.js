@@ -4,12 +4,12 @@ import './TopTenButton.scss';
 
 function TopTenButton(props) {
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        props.onClickTopTen(true);
-    };
-
-    console.log('menu', props.isTopTen)
+    // const handleClick = (event) => {
+    //     event.preventDefault();
+    //     props.onClickTopTen(true);
+    // };
+    //
+    // console.log('menu', props.isTopTen)
 
     return (
         <nav className="menu">

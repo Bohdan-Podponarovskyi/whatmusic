@@ -4,7 +4,7 @@ import SearchInput from "../../elements/SearchInput/SearchInput";
 import axios from "axios";
 
 const Home = (props) => {
-    // const [tracks, setTracks] = useState([]);
+    const [tracks, setTracks] = useState([]);
     // const [artist, setArtist] = useState([]);
     // const { tracksResults, artistResults } = props;
     // const { tracksResults, setTracksResults } = props;

@@ -4,9 +4,10 @@ import axios from "axios";
 import Home from '../../pages/Home/Home';
 import SearchInput from "../../elements/SearchInput/SearchInput";
 import SearchResults from '../../pages/SearchResults/SearchResults';
+import TopTenResults from "../../pages/TopTenResults/TopTenResults";
 
 function Main({children}) {
-    const [tracksResults, setTracksResults] = useState([]);
+    // const [tracksResults, setTracksResults] = useState([]);
     // const [artistResults, setArtistResults] = useState([]);
 
     const handleReceivedData = (query) => {
