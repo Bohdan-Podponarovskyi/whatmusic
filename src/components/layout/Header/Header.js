@@ -1,8 +1,9 @@
 import React from "react";
 
 import './Header.scss';
-import Logo from "../../Logo/Logo";
-import TopTenButton from "../../TopTenButton/TopTenButton";
+import Logo from "../../elements/Logo/Logo";
+import TopTenButton from "../../elements/TopTenButton/TopTenButton";
+// import { Link } from "react-router-dom";
 
 function Header() {
     // console.log('header', props.isTopTen)

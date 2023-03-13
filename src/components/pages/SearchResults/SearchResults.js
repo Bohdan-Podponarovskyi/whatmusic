@@ -25,19 +25,31 @@
 // };
 //
 // export default SearchResults;
-import React, {useState, Component} from 'react';
-import axios from "axios";
+// import React from 'react';
+// import axios from "axios";
+//
+// const SearchResults  {
+//
+//
+//     render() {
+//         return (
+//             <div>
+// HI
+//             </div>
+//         );
+//     }
+// }
+//
+// export default SearchResults;
 
-class SearchResults extends Component {
+import React from 'react';
 
-
-    render() {
-        return (
-            <div>
-HI
-            </div>
-        );
-    }
-}
+const SearchResults = (props) => {
+    return (
+        <div>
+            HI
+        </div>
+    );
+};
 
 export default SearchResults;
