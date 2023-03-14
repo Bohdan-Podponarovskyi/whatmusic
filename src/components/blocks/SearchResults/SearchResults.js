@@ -42,12 +42,25 @@
 //
 // export default SearchResults;
 
-import React from 'react';
+import React, {useState} from 'react';
+import Track from '../Track/Track';
+
+// const [track, setTrack] = useState([]);
+
+// track = props.tracksResults.track
 
 const SearchResults = (props) => {
+    console.log('from SearchResult', props.tracksResults)
     return (
-        <div>
-            HI
+        <div className="search-results">
+
+            {props.tracksResults.length > 0 && (
+                <div className="search-results__list top-ten" id="searchResults">
+                    {props.tracksResults.map(track => (
+                        <Track key={track.track.track_id} track={track.track} trackId={props.trackId} setTrackId={props.setTrackId}></Track>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

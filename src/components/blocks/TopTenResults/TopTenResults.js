@@ -4,17 +4,10 @@ import './TopTenResults.scss';
 
 const TopTenResults = () => {
     const [topTenTracks, setTopTenTracks] = useState([]);
-    // const [isTopTenLoaded, setIsTopTenLoaded] = useState(false);
-    // const [isMounted, setIsMounted] = useState(false);
-    //
-    // useEffect(() => {
-    //     setIsMounted(true);
-    //     return () => setIsMounted(false);
-    // }, []);
 
     useEffect( () => {
             console.log('Before API request', topTenTracks);
-            axios.get(`/api/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=it&apikey=${process.env.REACT_APP_API_KEY}`)
+            axios.get(`/api/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&apikey=${process.env.REACT_APP_API_KEY}`)
                 // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=it&apikey=9a50ec3e16fa6c7cfc296650a7c70f4f`)
                 .then(response => {
                     setTopTenTracks(response.data.message.body.track_list);
@@ -29,7 +22,6 @@ const TopTenResults = () => {
 
     return (
         <div className="search-results__top-ten">
-            {/*{console.log("return", topTenTracks)}*/}
             {topTenTracks?.length > 0 && (
             <ul className="search-results__list top-ten" id="searchResults">
                 {topTenTracks.map(track => (
