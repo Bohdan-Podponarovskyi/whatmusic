@@ -7,8 +7,8 @@ function TopTenButton() {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/top-10`);
-        window.location.reload();
+        // navigate(`/top-10`);
+        // window.location.reload();
     }
 
     return (

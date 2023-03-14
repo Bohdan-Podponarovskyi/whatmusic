@@ -19,7 +19,7 @@ function Main({children}) {
                 <Route exact path="/" element={<SearchInput
                     tracksResults={tracksResults}
                     setTracksResults={setTracksResults}/>} />
-                <Route exact path="/top-10" element={<TopTenResults />} />
+                <Route exact path="/top-10" element={<TopTenResults trackId={trackId} setTrackId={setTrackId}/>} />
                 <Route path="/search" element={<SearchResults tracksResults={tracksResults} trackId={trackId} setTrackId={setTrackId}/>} />
                 {/*<Route path="/lyrics/:track_id" element={<TrackLyrics trackId={tracksResults[0].track.track_id}/>} />*/}
                 <Route path="/lyrics/:track_id" element={<TrackLyrics tracksResults={tracksResults} trackId={trackId}/>} />

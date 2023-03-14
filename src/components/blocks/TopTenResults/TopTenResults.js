@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './TopTenResults.scss';
+import Track from '../Track/Track';
 
-const TopTenResults = () => {
+const TopTenResults = (props) => {
     const [topTenTracks, setTopTenTracks] = useState([]);
 
     useEffect( () => {
@@ -22,14 +23,10 @@ const TopTenResults = () => {
 
     return (
         <div className="search-results__top-ten">
-            {topTenTracks?.length > 0 && (
+            {topTenTracks.length > 0 && (
             <ul className="search-results__list top-ten" id="searchResults">
                 {topTenTracks.map(track => (
-                    <li key={track.track.track_id} className="search-results__list-item">
-                        <div className="search-results__list-desc">Track: {track.track.track_name}</div>
-                        <div className="search-results__list-desc">Artist: {track.track.artist_name}</div>
-                        <div className="search-results__list-desc">Album: {track.track.album_name}</div>
-                    </li>
+                    <Track key={track.track.track_id} track={track.track} trackId={props.trackId} setTrackId={props.setTrackId}></Track>
                 ))}
             </ul>
                 )}

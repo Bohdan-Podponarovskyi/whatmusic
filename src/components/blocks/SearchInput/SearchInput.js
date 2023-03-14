@@ -57,7 +57,7 @@
 // export default SearchInput;
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import './SearchInput.scss';
@@ -77,7 +77,7 @@ const SearchInput = (props) => {
                 console.log('from Search input', response.data);
                 setTracksResults(response.data.message.body.track_list);
                 console.log('TracksResults', tracksResults);
-                navigate(`/search?q=${encodeURIComponent(query)}`);
+                navigate(`/search?q=${encodeURIComponent(query)}&tracksResults=${encodeURIComponent(JSON.stringify(tracksResults))}`);
             })
             .catch(error => {
                 console.log(error);
@@ -87,6 +87,14 @@ const SearchInput = (props) => {
     const handleInputChange = (event) => {
         setQuery(event.target.value);
     };
+
+    // useEffect(() => {
+    //     const params = new URLSearchParams(window.location.search);
+    //     const results = params.get('tracksResults');
+    //     if (results) {
+    //         setTracksResults(JSON.parse(decodeURIComponent(results)));
+    //     }
+    // }, []);
 
 
     return (

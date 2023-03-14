@@ -42,12 +42,8 @@
 //
 // export default SearchResults;
 
-import React, {useState} from 'react';
+import React from 'react';
 import Track from '../Track/Track';
-
-// const [track, setTrack] = useState([]);
-
-// track = props.tracksResults.track
 
 const SearchResults = (props) => {
     console.log('from SearchResult', props.tracksResults)
