@@ -6,12 +6,11 @@ import SearchResults from "../../blocks/SearchResults/SearchResults";
 import TrackLyrics from "../../blocks/TrackLyrics/TrackLyrics";
 
 
-function Main({children}) {
+function Main({}) {
     const [tracksResults, setTracksResults] = useState([]);
-    const [trackId, setTrackId] = useState([]);
+    const [trackId, setTrackId] = useState('');
     console.log('Main', tracksResults);
     console.log('Main_iD', trackId)
-
 
     return (
         <div className="main">
@@ -24,7 +23,6 @@ function Main({children}) {
                 {/*<Route path="/lyrics/:track_id" element={<TrackLyrics trackId={tracksResults[0].track.track_id}/>} />*/}
                 <Route path="/lyrics/:track_id" element={<TrackLyrics tracksResults={tracksResults} trackId={trackId}/>} />
             </Routes>
-            {/*{filteredChildren}*/}
         </div>
     );
 }

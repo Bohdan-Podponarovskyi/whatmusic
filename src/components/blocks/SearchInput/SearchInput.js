@@ -72,12 +72,22 @@ const SearchInput = (props) => {
     function handleSubmit(event) {
         event.preventDefault();
         console.log('Search query', query);
-        axios.get(`/api/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc`)
+        // axios.get(`https://api.musixmatch.com/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc`)
+        // axios.get(`/api/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc`)
             .then(response => {
                 console.log('from Search input', response.data);
-                setTracksResults(response.data.message.body.track_list);
-                console.log('TracksResults', tracksResults);
-                navigate(`/search?q=${encodeURIComponent(query)}&tracksResults=${encodeURIComponent(JSON.stringify(tracksResults))}`);
+                // setTracksResults(response.data.message.body.track_list);
+                // console.log('TracksResults', tracksResults);
+                // navigate(`/search?q=${encodeURIComponent(query)}`);
+                const tracks = response.data.message.body.track_list;
+                if (tracks.length === 0) {
+                    console.log('No results found');
+                } else {
+                    setTracksResults(tracks);
+                    console.log('TracksResults', tracks);
+                    navigate(`./search?q=${encodeURIComponent(query)}`);
+                }
             })
             .catch(error => {
                 console.log(error);
