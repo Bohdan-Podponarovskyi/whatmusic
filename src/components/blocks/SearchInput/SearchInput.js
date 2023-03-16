@@ -1,161 +1,10 @@
-// import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
-// import './SearchInput.scss';
-//
-//
-// function SearchInput(props) {
-//     const [query, setQuery] = useState('');
-//     const navigate = useNavigate();
-//
-//     function handleSubmit(event) {
-//         event.preventDefault();
-//         navigate("/search");
-//         props.onSubmit(query);
-//     }
-//
-//     // function handleSubmit(event) {
-//     //     event.preventDefault();
-//     //     console.log('Search query', query);
-//     //     axios.get(`/api/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=5&s_track_rating=desc`)
-//     //         .then(response => {
-//     //             console.log('from Search input', response.data);
-//     //             props.setTracksResults(response.data.message.body.track_list);
-//     //             console.log('TracksResults', props.tracksResults);
-//     //         })
-//     //         .catch(error => {
-//     //             console.log(error);
-//     //         });
-//     // }
-//
-//     const handleInputChange = (event) => {
-//         setQuery(event.target.value);
-//     };
-//
-//     // useEffect(() => {
-//     //     console.log('tracksResults changed:', props.tracksResults);
-//     // }, [props.tracksResults]);
-//
-//     return (
-//         <form method="get" className="search-form" onSubmit={handleSubmit}>
-//             <label htmlFor="search-input" className="search-form__input-label">
-//                 <input id="search-input"
-//                        type="text"
-//                        className="search-form__input"
-//                        placeholder="Enter song / album / artist"
-//                        autoComplete="off"
-//                        value={query}
-//                        onChange={handleInputChange}
-//                 />
-//             </label>
-//             <button type="submit" className="search-form__button">
-//                 <span className="search-form__button-text">search</span>
-//             </button>
-//         </form>
-//     )
-// }
-//
-// export default SearchInput;
-
-
-// import React, { useState, useEffect } from "react";
-// import { useNavigate } from 'react-router-dom';
-// import axios from "axios";
-// import './SearchInput.scss';
-// import { Link } from "react-router-dom";
-//
-//
-// const SearchInput = (props) => {
-//
-//     let tracks = '';
-//
-//     const [query, setQuery] = useState('');
-//     const [newTracks, setNewTracks] = useState(tracks);
-//
-//
-//     const { tracksResults, setTracksResults } = props;
-//
-//     const navigate = useNavigate();
-//
-//
-//     function handleSubmit(event) {
-//         event.preventDefault();
-//         console.log('Search query', query);
-//         // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc`)
-//         // axios.get(`https://api.musixmatch.com/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc`)
-//         axios.get(`/api/ws/1.1/track.search?apikey=${process.env.REACT_APP_API_KEY}&q_track=${query}&page_size=10&page=1&s_track_rating=desc&f_has_lyrics`)
-//             .then(response => {
-//                 console.log('from Search input', response.data);
-//                 // setTracksResults(response.data.message.body.track_list);
-//                 // console.log('TracksResults', tracksResults);
-//                 // navigate(`/search?q=${encodeURIComponent(query)}`);
-//                 tracks = response.data.message.body.track_list;
-//                 if (tracks.length === 0) {
-//                     tracks = 'No results found';
-//                     setNewTracks(tracks);
-//                     console.log('No results found');
-//                 } else {
-//                     setTracksResults(tracks);
-//                     console.log('TracksResults', tracks);
-//                     // navigate(`./search?q=${encodeURIComponent(query)}`);
-//                 }
-//             })
-//             .catch(error => {
-//                 console.log(error);
-//             });
-//     }
-//
-//     const handleInputChange = (event) => {
-//         setQuery(event.target.value);
-//     };
-//
-//     console.log('tracks', tracks)
-//
-//
-//     return (
-//         <form method="get" className="search-form" onSubmit={handleSubmit}>
-//             <label htmlFor="search-input" className="search-form__input-label">
-//                 <input id="search-input"
-//                        type="text"
-//                        className="search-form__input"
-//                        placeholder="Enter song / album / artist"
-//                        autoComplete="off"
-//                        value={query}
-//                        onChange={handleInputChange}
-//                 />
-//             </label>
-//             <Link to={`/search`}>
-//                 <button type="submit" className="search-form__button">
-//                     <span className="search-form__button-text">search</span>
-//                 </button>
-//             </Link>
-//             <p>{newTracks}</p>
-//         </form>
-//     )
-// }
-//
-// export default SearchInput;
-
 import React, { useState } from "react";
-// import { useNavigate } from 'react-router-dom';
-import axios from "axios";
 import './SearchInput.scss';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-
-const SearchInput = (props) => {
-
-    let tracks = '';
+const SearchInput = () => {
 
     const [query, setQuery] = useState('');
-    const [newTracks, setNewTracks] = useState(tracks);
-
-    const location = useLocation();
-
-
-    const { tracksResults, setTracksResults } = props;
-
-    // const navigate = useNavigate();
-
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -165,8 +14,7 @@ const SearchInput = (props) => {
         setQuery(event.target.value);
     };
 
-    // console.log('tracks', tracks)
-
+    console.log('from SearchInput', query)
 
     return (
         <form method="get" className="search-form" onSubmit={handleSubmit}>
@@ -180,12 +28,11 @@ const SearchInput = (props) => {
                        onChange={handleInputChange}
                 />
             </label>
-            <Link to={`/search?q=${query}`}>
+            <Link to={`/search?q=${encodeURIComponent(query)}`}>
                 <button type="submit" className="search-form__button">
                     <span className="search-form__button-text">search</span>
                 </button>
             </Link>
-            <p>{newTracks}</p>
         </form>
     )
 }
