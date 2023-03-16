@@ -9,18 +9,18 @@ const TopTenResults = (props) => {
 
     useEffect( () => {
             console.log('Before API request', topTenTracks);
-            axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&apikey=${process.env.REACT_APP_API_KEY}`)
-            // axios.get(`https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&apikey=${process.env.REACT_APP_API_KEY}`)
+            // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&apikey=${process.env.REACT_APP_API_KEY}`)
+            axios.get(`/api/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
                 // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=it&apikey=9a50ec3e16fa6c7cfc296650a7c70f4f`)
                 .then(response => {
                     setTopTenTracks(response.data.message.body.track_list);
                     // setIsTopTenLoaded(true);
-                    console.log('Response', response.data)
+                    // console.log('Response', response.data)
                 })
                 .catch(error => {
                     console.log(error);
                 });
-        console.log('After API request', topTenTracks);
+        // console.log('After API request', topTenTracks);
     }, []);
 
     return (
@@ -28,7 +28,7 @@ const TopTenResults = (props) => {
             {topTenTracks.length > 0 && (
             <ul className="search-results__list top-ten" id="searchResults">
                 {topTenTracks.map(track => (
-                        <Track key={track.track.track_id} track={track.track} trackId={props.trackId} setTrackId={props.setTrackId}></Track>
+                    <Track key={track.track.track_id} track={track.track} trackId={props.trackId} setTrackId={props.setTrackId}></Track>
                     // <Track key={track.track.track_id} track={track.track} trackId={props.trackId} setTrackId={props.setTrackId}></Track>
                 ))}
             </ul>

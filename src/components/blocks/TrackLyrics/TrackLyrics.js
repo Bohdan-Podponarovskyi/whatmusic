@@ -7,8 +7,8 @@ const TrackLyrics = (props) => {
     console.log('from tracklyrics_id', props.trackId)
 
     useEffect( () => {
-        // axios.get(`/api/ws/1.1/track.lyrics.get?track_id=${props.trackId}&apikey=${process.env.REACT_APP_API_KEY}`)
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${props.trackId}&apikey=${process.env.REACT_APP_API_KEY}`)
+        axios.get(`/api/ws/1.1/track.lyrics.get?track_id=${props.trackId}&apikey=${process.env.REACT_APP_API_KEY}`)
+        // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${props.trackId}&apikey=${process.env.REACT_APP_API_KEY}`)
             // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=it&apikey=9a50ec3e16fa6c7cfc296650a7c70f4f`)
             .then(response => {
                 console.log('Response_from tracklyrics', response.data)

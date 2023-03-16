@@ -8,7 +8,6 @@ function TopTenButton() {
 
     const handleClick = () => {
         navigate(`./top-10`);
-        // window.location.reload();
     }
 
     return (

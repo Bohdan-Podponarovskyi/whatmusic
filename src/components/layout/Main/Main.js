@@ -4,6 +4,7 @@ import SearchInput from "../../blocks/SearchInput/SearchInput";
 import TopTenResults from "../../blocks/TopTenResults/TopTenResults";
 import SearchResults from "../../blocks/SearchResults/SearchResults";
 import TrackLyrics from "../../blocks/TrackLyrics/TrackLyrics";
+import './Main.scss';
 
 
 function Main({}) {
