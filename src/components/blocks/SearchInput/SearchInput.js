@@ -14,7 +14,7 @@ const SearchInput = () => {
         setQuery(event.target.value);
     };
 
-    console.log('from SearchInput', query)
+    // console.log('from SearchInput', query)
 
     return (
         <form method="get" className="search-form" onSubmit={handleSubmit}>
