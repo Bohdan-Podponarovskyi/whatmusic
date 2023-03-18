@@ -57,9 +57,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import Track from '../Track/Track';
+import Track from '../../elements/Track/Track';
 import axios from "axios";
 import './SearchResults.scss';
+import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
 
 const SearchResults = () => {
     const [searchResults, setSearchResults] = useState([]);
@@ -91,15 +92,15 @@ const SearchResults = () => {
     }, []);
 
     return (
-        <div className="search-results">
-            {searchResults?.length > 0 ? (
-                searchResults.map(track => (
-                    <Link key={track.track.commontrack_id} to={`/lyrics?id=${track.track.commontrack_id}`} className="">
-                        <Track track={track.track}></Track>
-                    </Link>
-                ))
-            ) : (<p>{noTracksFound}</p>)}
-        </div>
+            <ContentWrapper specialClass="query-results">
+                {searchResults.length > 0 ? (
+                    searchResults.map(track => (
+                        <Link key={track.track.commontrack_id} to={`/lyrics?id=${track.track.commontrack_id}`} className="query-results__unit">
+                            <Track trackDetails={track.track}></Track>
+                        </Link>
+                    ))
+                ) : (<p>{noTracksFound}</p>)}
+            </ContentWrapper>
     );
 };
 

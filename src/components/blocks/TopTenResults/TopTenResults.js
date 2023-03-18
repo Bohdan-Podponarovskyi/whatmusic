@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './TopTenResults.scss';
-import Track from '../Track/Track';
+import Track from '../../elements/Track/Track';
 import { Link } from "react-router-dom";
+import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
+
 
 const TopTenResults = () => {
     const [topTenTracks, setTopTenTracks] = useState([]);
@@ -21,17 +23,17 @@ const TopTenResults = () => {
     }, []);
 
     return (
-        <div className="search-results__top-ten">
-            {topTenTracks.length > 0 && (
-            <ul className="search-results__list top-ten" id="searchResults">
-                {topTenTracks.map(track => (
-                    <Link key={track.track.track_id} to={`/lyrics?id=${encodeURIComponent(track.track.track_id)}`} className="">
-                        <Track track={track.track}></Track>
-                    </Link>
-                ))}
-            </ul>
+        // <div className="search-results__top-ten">
+            <ContentWrapper specialClass="query-results">
+                {topTenTracks.length > 0 && (
+                        topTenTracks.map(track => (
+                            <Link key={track.track.commontrack_id} to={`/lyrics?id=${encodeURIComponent(track.track.commontrack_id)}`} className="query-results__unit">
+                                <Track trackDetails={track.track}></Track>
+                            </Link>
+                        ))
                 )}
-        </div>
+            </ContentWrapper>
+        // </div>
     );
 }
 

@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.track-details {
+  background: rgba(223, 224, 228, 0.2);
+  color: white;
+  //min-height: 100px;
+  padding: 10px 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  //max-height: 50px;
+  cursor: pointer;
+
+  &__unit {
+    //text-overflow: ellipsis;
+    //overflow: hidden;
+    ////white-space: nowrap;
+
+    &--artist {
+      font-family: $secondary-text;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+
+}

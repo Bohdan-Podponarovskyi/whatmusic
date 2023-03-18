@@ -38,6 +38,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
+import Track from "../../elements/Track/Track";
 
 const TrackLyrics = () => {
     const [trackLyrics, setTrackLyrics] = useState([]);
@@ -85,10 +87,11 @@ const TrackLyrics = () => {
     }, []);
 
     return (
-        <div>
+        <ContentWrapper specialClass="search-results__wrapper">
+        {/*<div>*/}
             {/*{trackLyrics && trackDetails && (*/}
                 <div>
-                    <p>{trackDetails.track_name}</p>
+                    {/*<Track trackDetails={trackDetails}></Track>*/}
                     <p>{trackGenre}</p>
                     {trackLyrics.lyrics_body !== "" && <p>{trackLyrics.lyrics_body}</p>}
                     <p>{trackLyrics.lyrics_copyright}</p>
@@ -97,7 +100,8 @@ const TrackLyrics = () => {
             {/*{trackLyrics && <p>{trackDetails}</p>}*/}
             {/*{trackLyrics && trackLyrics.lyrics_body !== '' && <p>{trackLyrics.lyrics_body}</p>}*/}
             {/*{trackLyrics && <p>{trackLyrics.lyrics_copyright}</p>}*/}
-        </div>
+        {/*</div>*/}
+        </ContentWrapper>
     );
 }
 
