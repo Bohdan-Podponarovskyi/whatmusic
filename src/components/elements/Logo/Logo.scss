@@ -1,0 +1,10 @@
+.logo {
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__image {
+    max-width: 10vw;
+  }
+}

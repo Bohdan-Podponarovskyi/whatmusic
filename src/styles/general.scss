@@ -20,21 +20,19 @@
 html {
   min-height: 100%;
   padding: 3vw 0;
-  //height: 100%;
-  box-sizing: border-box;
 }
 
 body {
   background-image: url("./../img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  //min-height: 100%;
   height: 100%;
-  position: relative;
+
+  font-style: normal;
+  font-weight: 400;
 }
 
 #root {
-  //min-height: 100%;
   height: 100%;
   padding-top: 0.1px;
 }

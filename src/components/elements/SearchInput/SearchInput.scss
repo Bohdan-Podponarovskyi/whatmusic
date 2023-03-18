@@ -14,9 +14,9 @@
 
   &__input {
     width: 69.4vw;
-    height: 6.25vw;
-    background: #DFE0E4;
-    border-radius: 20px;
+    height: 60%;
+    background: var(--color-white);
+    border-radius: 5px;
     border: none;
     margin: auto;
     position: absolute;
@@ -24,8 +24,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    font-family: 'Yomogi', cursive;
-    font-weight: 400;
+    font-family: var(--primary-text);
     font-size: 3vw;
     line-height: 4vw;
 
@@ -68,7 +67,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    font-family: 'Zen Dots', cursive;
+    font-family: var(--button-text);
     margin-top: 5vw;
 
     &-text {
@@ -77,10 +76,9 @@
       top: 50%;
       left: 50%;;
       transform: translate(-50%, -50%);
-      font-weight: 400;
       font-size: 1.875vw;
       line-height: 2.22vw;
-      color: #DFE0E4;
+      color: var(--color-white);
       z-index: 2;
       vertical-align: middle;
     }

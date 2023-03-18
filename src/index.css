@@ -1,0 +1,10 @@
+:root {
+    --primary-text: 'Yomogi', cursive;
+    --secondary-text: 'Yomogi', cursive;
+    --nav-text: 'Bungee', cursive;
+    --button-text: 'Zen Dots', cursive;
+
+    --color-white-default: #ffffff;
+    --color-white: #DFE0E4;
+    --color-orange: #DA6900;
+}

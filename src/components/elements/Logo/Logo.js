@@ -7,7 +7,7 @@ const Logo = () => {
 
     return(
         <div className="logo">
-            <Link to={`/`} className="logo__image"><img src={logo} alt="Logo"/></Link>
+            <Link to={`/`} className="logo__link"><img src={logo} alt="Logo" className="logo__image"/></Link>
         </div>
     )
 }
