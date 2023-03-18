@@ -59,6 +59,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import Track from '../Track/Track';
 import axios from "axios";
+import './SearchResults.scss';
 
 const SearchResults = () => {
     const [searchResults, setSearchResults] = useState([]);
@@ -67,7 +68,7 @@ const SearchResults = () => {
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('q');
 
-    console.log('from SearchResult', query);
+    console.log('from SearchResult_query', query);
 
     useEffect(() => {
         axios
@@ -75,11 +76,10 @@ const SearchResults = () => {
             // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${query}&page_size=10&page=1&s_track_rating=desc&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
             // axios.get(`https://api.musixmatch.com/ws/1.1/track.search?q_track=${query}&page_size=10&page=1&s_track_rating=desc&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
             .then((response) => {
-                console.log('from SearchResult', response.data);
                 const tracksList = response.data.message.body.track_list;
                 if (tracksList?.length > 0) {
                     setSearchResults(tracksList);
-                    console.log('from SearchResult', tracksList);
+                    console.log('from SearchResult_tracksList', tracksList);
                 } else {
                     setNoTracksFound('No results found');
                     console.log('No results found');
@@ -94,7 +94,7 @@ const SearchResults = () => {
         <div className="search-results">
             {searchResults?.length > 0 ? (
                 searchResults.map(track => (
-                    <Link key={track.track.track_id} to={`/lyrics?id=${encodeURIComponent(track.track.track_id)}`} className="">
+                    <Link key={track.track.commontrack_id} to={`/lyrics?id=${track.track.commontrack_id}`} className="">
                         <Track track={track.track}></Track>
                     </Link>
                 ))

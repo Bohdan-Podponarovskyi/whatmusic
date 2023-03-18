@@ -26,9 +26,14 @@ html {
 
 body {
   height: 100%;
+  position: relative;
 }
 
 #root {
   height: 100%;
   padding-top: 0.1px;
+}
+
+a {
+  text-decoration: none;
 }

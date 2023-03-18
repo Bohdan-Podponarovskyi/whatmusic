@@ -99,14 +99,3 @@
     }
   }
 }
-
-.search-results {
-  font-size: 30px;
-  background-color: white;
-  overflow-y: auto;
-  font-family: 'Zen Dots', cursive;
-
-  &__list-item:nth-child(even) {
-    background-color: aqua;
-  }
-}
