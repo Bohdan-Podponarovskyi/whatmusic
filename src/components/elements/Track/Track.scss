@@ -1,17 +1,35 @@
 .track-details {
-  background: rgba(223, 224, 228, 0.2);
-  color: white;
-  //min-height: 100px;
+  background: rgba(223, 224, 228, 0.1);
+  color: var(--color-white-default);
   padding: 10px 15px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  //max-height: 50px;
-  cursor: pointer;
+  //max-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:not(.track-lyrics .track-details):hover {
+    background: rgba(218, 105, 0, 0.6);
+  }
+
+  &:not(.track-lyrics .track-details):hover .track-details__icon {
+    color: var(--color-white-default)
+  }
+
+  &__icon {
+    margin-right: 5px;
+    color: var(--color-orange)
+  }
+
 
   &__unit {
-    //text-overflow: ellipsis;
-    //overflow: hidden;
-    ////white-space: nowrap;
+    width: 35vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-family: var(--secondary-text);
+
 
     &--artist {
       font-family: var(--secondary-text);
@@ -19,6 +37,4 @@
       line-height: 23px;
     }
   }
-
-
 }

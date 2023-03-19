@@ -1,0 +1,17 @@
+.error {
+  font-family: var(--nav-text);
+  color: var(--color-orange);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 80px;
+  line-height: 96px;
+
+  &__first-line {
+    margin-bottom: 35px;
+    font-size: 150px;
+  }
+}

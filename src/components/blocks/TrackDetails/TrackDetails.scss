@@ -1,0 +1,17 @@
+.track-lyrics {
+
+  &__desc {
+    background: rgba(223, 224, 228, 0.1);
+    color: var(--color-white);
+    margin-top: 10px;
+
+    font-family: var(--secondary-text);
+    padding: 10px 15px;
+    text-align: center;
+
+    &-title {
+      font-family: var(--nav-text);
+      color: var(--color-orange);
+    }
+  }
+}

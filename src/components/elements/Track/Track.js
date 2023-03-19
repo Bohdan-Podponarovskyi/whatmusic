@@ -14,9 +14,9 @@ const Track = (props) => {
 
     return (
             <div className="track-details">
-                <p className="track-details__unit"><FontAwesomeIcon icon={faMusic} /> {trackDetails.track_name}</p>
-                <p className="track-details__unit track-details__unit--artist"><FontAwesomeIcon icon={faMicrophone} /> {trackDetails.artist_name}</p>
-                {/*<div className="track-details__unit"><FontAwesomeIcon icon={faRecordVinyl} /> {trackDetails.album_name}</div>*/}
+                <p className="track-details__unit"><FontAwesomeIcon icon={faMusic} className="track-details__icon"/>{trackDetails.track_name}</p>
+                <p className="track-details__unit track-details__unit--artist"><FontAwesomeIcon icon={faMicrophone} className="track-details__icon"/>{trackDetails.artist_name}</p>
+                <p className="track-details__unit"><FontAwesomeIcon icon={faRecordVinyl} className="track-details__icon"/>{trackDetails.album_name}</p>
             </div>
     );
 };

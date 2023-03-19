@@ -1,2 +1,6 @@
 .query-results {
+
+  &__unit {
+    flex-basis: calc(50% - 1vw);
+  }
 }

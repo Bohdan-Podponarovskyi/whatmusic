@@ -3,9 +3,11 @@
   position: relative;
   padding: 3vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   gap: 3px;
+  justify-content: center;
 
   &:after {
     content: '';
