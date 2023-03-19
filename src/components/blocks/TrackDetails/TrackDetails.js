@@ -140,9 +140,11 @@ const TrackDetails = (props) => {
             .then((responses) => {
                 setTrackLyrics(responses[0].data.message.body.lyrics);
                 setTrackDetails(responses[1].data.message.body.track);
-                setTrackGenre(
-                    responses[1].data.message.body.track.primary_genres.music_genre_list[0].music_genre.music_genre_name
-                );
+
+                const genreList = responses[1].data.message.body.track.primary_genres.music_genre_list;
+                const genreName = genreList.length > 0 ? genreList[0].music_genre.music_genre_name : "No information";
+                setTrackGenre(genreName);
+
                 setIsLoading(false);
             })
             .catch((error) => {
@@ -150,6 +152,8 @@ const TrackDetails = (props) => {
                 setIsLoading(false);
             });
     }, []);
+
+    console.log(trackGenre)
 
     if (isLoading) {
         return <LoadingSpinner />;
@@ -176,3 +180,5 @@ const TrackDetails = (props) => {
 };
 
 export default TrackDetails;
+
+

@@ -28,6 +28,7 @@ const SearchInput = (props) => {
                        autoComplete="off"
                        value={query}
                        onChange={handleInputChange}
+                       required
                 />
             </label>
             <Link to={`/search?q=${encodeURIComponent(query)}`}>

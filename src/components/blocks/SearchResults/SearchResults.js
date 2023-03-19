@@ -83,14 +83,17 @@ const SearchResults = () => {
             // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${query}&page_size=10&page=1&s_track_rating=desc&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
             // axios.get(`https://api.musixmatch.com/ws/1.1/track.search?q_track=${query}&page_size=10&page=1&s_track_rating=desc&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
             .then((response) => {
-                const tracksList = response.data.message.body.track_list;
-                if (tracksList?.length > 0) {
-                    setSearchResults(tracksList);
-                    console.log('from SearchResult_tracksList', tracksList);
+                const responseBody = response.data.message.body;
+                if (!responseBody || !responseBody.track_list) {
+                    setError(error);
                     setIsLoading(false);
-                } else {
+                }
+                if (responseBody.track_list.length === 0) {
                     setNoTracksFound('No results found');
-                    console.log('No results found');
+                    setIsLoading(false);
+                }
+                else {
+                    setSearchResults(responseBody.track_list);
                     setIsLoading(false);
                 }
             })
