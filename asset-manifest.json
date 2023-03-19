@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/whatmusic/static/css/main.79eb277c.css",
-    "main.js": "/whatmusic/static/js/main.d1ae632b.js",
+    "main.js": "/whatmusic/static/js/main.51355592.js",
     "static/js/787.a7935d46.chunk.js": "/whatmusic/static/js/787.a7935d46.chunk.js",
     "static/media/Yomogi-Regular.ttf": "/whatmusic/static/media/Yomogi-Regular.b23d0b66f3cd12f0ed5c.ttf",
     "static/media/bg-dark.png": "/whatmusic/static/media/bg-dark.28cb8d9499eee758b20d.png",
@@ -16,11 +16,11 @@
     "index.html": "/whatmusic/index.html",
     "static/media/logo.svg": "/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
     "main.79eb277c.css.map": "/whatmusic/static/css/main.79eb277c.css.map",
-    "main.d1ae632b.js.map": "/whatmusic/static/js/main.d1ae632b.js.map",
+    "main.51355592.js.map": "/whatmusic/static/js/main.51355592.js.map",
     "787.a7935d46.chunk.js.map": "/whatmusic/static/js/787.a7935d46.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79eb277c.css",
-    "static/js/main.d1ae632b.js"
+    "static/js/main.51355592.js"
   ]
 }
