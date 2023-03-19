@@ -3,4 +3,10 @@
   &__unit {
     flex-basis: calc(50% - 1vw);
   }
+
+  &__not-found {
+    flex-basis: 100%;
+    text-align: center;
+    color: var(--color-orange);
+  }
 }

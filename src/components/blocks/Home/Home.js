@@ -6,11 +6,12 @@ import SearchInput from "../../elements/SearchInput/SearchInput";
 import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
 
 
-function Home() {
+function Home(props) {
+    const { isDarkMode } = props;
 
     return(
         <div className="home">
-            <SearchInput></SearchInput>
+            <SearchInput isDarkMode={isDarkMode}></SearchInput>
         </div>
         // <ContentWrapper specialClass="home">
         //

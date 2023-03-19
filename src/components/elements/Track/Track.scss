@@ -23,7 +23,8 @@
 
 
   &__unit {
-    width: 35vw;
+    max-width: 32vw;
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

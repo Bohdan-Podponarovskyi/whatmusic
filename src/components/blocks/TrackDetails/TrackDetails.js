@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 // import { useLocation } from "react-router-dom";
 // import axios from "axios";
-// import "./TrackDetails.scss";
+// import "./TrackLyrics.scss";
 // import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
 // import Track from "../../elements/Track/Track";
 // import Copyright from "../../elements/Copyright/Copyright";
@@ -72,15 +72,18 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import "./TrackDetails.scss";
+import "../../elements/TrackLyrics/TrackLyrics.scss";
 import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
 import Track from "../../elements/Track/Track";
 import TrackLyrics from "../../elements/TrackLyrics/TrackLyrics";
 import Copyright from "../../elements/Copyright/Copyright";
 import LoadingSpinner from "../../elements/LoadingSpinner/LoadingSpinner";
 import Error from "../../blocks/Error/Error";
+import GoBackButton from "../../elements/GoBackButton/GoBackButton";
 
-const TrackDetails = () => {
+const TrackDetails = (props) => {
+    const { isDarkMode } = props;
+
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -167,6 +170,7 @@ const TrackDetails = () => {
                     className="track-lyrics__desc"
                     trackLyrics={trackLyrics} />
             </div>
+            <GoBackButton isDarkMode={isDarkMode}/>
         </ContentWrapper>
     );
 };

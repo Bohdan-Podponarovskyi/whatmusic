@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
 import LoadingSpinner from "../../elements/LoadingSpinner/LoadingSpinner";
 import Error from "../Error/Error";
+import GoBackButton from "../../elements/GoBackButton/GoBackButton";
 
 
-const TopTenResults = () => {
+const TopTenResults = (props) => {
+    const { isDarkMode } = props;
+
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -39,17 +42,16 @@ const TopTenResults = () => {
     }
 
     return (
-        // <div className="search-results__top-ten">
-            <ContentWrapper specialClass="query-results">
-                {topTenTracks.length > 0 && (
-                        topTenTracks.map(track => (
-                            <Link key={track.track.commontrack_id} to={`/lyrics?id=${encodeURIComponent(track.track.commontrack_id)}`} className="query-results__unit">
-                                <Track trackDetails={track.track}></Track>
-                            </Link>
-                        ))
-                )}
-            </ContentWrapper>
-        // </div>
+        <ContentWrapper specialClass="query-results">
+            {topTenTracks.length > 0 && (
+                topTenTracks.map(track => (
+                    <Link key={track.track.commontrack_id} to={`/lyrics?id=${encodeURIComponent(track.track.commontrack_id)}`} className="query-results__unit">
+                        <Track trackDetails={track.track}></Track>
+                    </Link>
+                ))
+            )}
+            <GoBackButton isDarkMode={isDarkMode}/>
+        </ContentWrapper>
     );
 }
 

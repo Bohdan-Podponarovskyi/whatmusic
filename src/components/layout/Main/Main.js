@@ -8,16 +8,17 @@ import TrackDetails from "../../blocks/TrackDetails/TrackDetails";
 import Error from "../../blocks/Error/Error";
 import './Main.scss';
 
-const Main = () => {
+const Main = (props) => {
+    const { isDarkMode } = props;
 
     return (
         <div className="main">
             <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route exact path="/top-10" element={<TopTenResults />} />
-                <Route path="/search" element={<SearchResults />} />
-                <Route path="/lyrics" element={<TrackDetails />} />
-                <Route path="*" element={<Error />} />
+                <Route exact path="/" element={<Home isDarkMode={isDarkMode}/>} />
+                <Route exact path="/top-10" element={<TopTenResults isDarkMode={isDarkMode}/>} />
+                <Route path="/search" element={<SearchResults isDarkMode={isDarkMode}/>} />
+                <Route path="/lyrics" element={<TrackDetails isDarkMode={isDarkMode}/>} />
+                <Route path="*" element={<Error isDarkMode={isDarkMode}/>} />
             </Routes>
         </div>
     );

@@ -63,6 +63,7 @@ import './SearchResults.scss';
 import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
 import LoadingSpinner from "../../elements/LoadingSpinner/LoadingSpinner";
 import Error from "../Error/Error";
+import GoBackButton from "../../elements/GoBackButton/GoBackButton";
 
 const SearchResults = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -116,7 +117,8 @@ const SearchResults = () => {
                         <Track trackDetails={track.track}></Track>
                     </Link>
                 ))
-            ) : (<p>{noTracksFound}</p>)}
+            ) : (<p className="query-results__not-found">{noTracksFound}</p>)}
+            <GoBackButton />
         </ContentWrapper>
     );
 };

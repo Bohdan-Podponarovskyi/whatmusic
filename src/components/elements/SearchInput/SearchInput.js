@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import './SearchInput.scss';
 import { Link } from "react-router-dom";
 
-const SearchInput = () => {
+const SearchInput = (props) => {
+
+    const { isDarkMode } = props;
 
     const [query, setQuery] = useState('');
 
@@ -29,8 +31,8 @@ const SearchInput = () => {
                 />
             </label>
             <Link to={`/search?q=${encodeURIComponent(query)}`}>
-                <button type="submit" className="search-form__button">
-                    <span className="search-form__button-text">search</span>
+                <button type="submit" className={`button ${isDarkMode ? 'button--dark' : 'button--light'}`}>
+                    <span className="button__text">search</span>
                 </button>
             </Link>
         </form>
