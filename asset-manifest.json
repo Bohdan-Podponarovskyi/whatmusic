@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Bohdan-Podponarovskyi/whatmusic/static/css/main.bafd3227.css",
-    "main.js": "/Bohdan-Podponarovskyi/whatmusic/static/js/main.96a3fc1b.js",
-    "static/js/787.a7935d46.chunk.js": "/Bohdan-Podponarovskyi/whatmusic/static/js/787.a7935d46.chunk.js",
-    "static/media/Yomogi-Regular.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/Yomogi-Regular.b23d0b66f3cd12f0ed5c.ttf",
-    "static/media/bg-dark.png": "/Bohdan-Podponarovskyi/whatmusic/static/media/bg-dark.28cb8d9499eee758b20d.png",
-    "static/media/bg-light.png": "/Bohdan-Podponarovskyi/whatmusic/static/media/bg-light.5693dee2043bdf1083c3.png",
-    "static/media/Ubuntu-Italic.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/Ubuntu-Italic.fbb3310412795b02afc4.ttf",
-    "static/media/Ubuntu-Regular.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
-    "static/media/Ubuntu-Bold.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
-    "static/media/search_input_bg.png": "/Bohdan-Podponarovskyi/whatmusic/static/media/search_input_bg.6f672839b40eb7609f76.png",
-    "static/media/Bungee-Regular.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/Bungee-Regular.3d95fa68283102c29cd9.ttf",
-    "static/media/ZenDots-Regular.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/ZenDots-Regular.ad9e0d65654bb49213b6.ttf",
-    "static/media/search_button_bg.png": "/Bohdan-Podponarovskyi/whatmusic/static/media/search_button_bg.71282d302a7524d9a6da.png",
-    "index.html": "/Bohdan-Podponarovskyi/whatmusic/index.html",
-    "static/media/logo.svg": "/Bohdan-Podponarovskyi/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
-    "main.bafd3227.css.map": "/Bohdan-Podponarovskyi/whatmusic/static/css/main.bafd3227.css.map",
-    "main.96a3fc1b.js.map": "/Bohdan-Podponarovskyi/whatmusic/static/js/main.96a3fc1b.js.map",
-    "787.a7935d46.chunk.js.map": "/Bohdan-Podponarovskyi/whatmusic/static/js/787.a7935d46.chunk.js.map"
+    "main.css": "/whatmusic/static/css/main.79eb277c.css",
+    "main.js": "/whatmusic/static/js/main.3b16595c.js",
+    "static/js/787.a7935d46.chunk.js": "/whatmusic/static/js/787.a7935d46.chunk.js",
+    "static/media/Yomogi-Regular.ttf": "/whatmusic/static/media/Yomogi-Regular.b23d0b66f3cd12f0ed5c.ttf",
+    "static/media/bg-dark.png": "/whatmusic/static/media/bg-dark.28cb8d9499eee758b20d.png",
+    "static/media/bg-light.png": "/whatmusic/static/media/bg-light.5693dee2043bdf1083c3.png",
+    "static/media/Ubuntu-Italic.ttf": "/whatmusic/static/media/Ubuntu-Italic.fbb3310412795b02afc4.ttf",
+    "static/media/Ubuntu-Regular.ttf": "/whatmusic/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
+    "static/media/Ubuntu-Bold.ttf": "/whatmusic/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
+    "static/media/search_input_bg.png": "/whatmusic/static/media/search_input_bg.6f672839b40eb7609f76.png",
+    "static/media/Bungee-Regular.ttf": "/whatmusic/static/media/Bungee-Regular.3d95fa68283102c29cd9.ttf",
+    "static/media/ZenDots-Regular.ttf": "/whatmusic/static/media/ZenDots-Regular.ad9e0d65654bb49213b6.ttf",
+    "static/media/search_button_bg.png": "/whatmusic/static/media/search_button_bg.71282d302a7524d9a6da.png",
+    "index.html": "/whatmusic/index.html",
+    "static/media/logo.svg": "/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
+    "main.79eb277c.css.map": "/whatmusic/static/css/main.79eb277c.css.map",
+    "main.3b16595c.js.map": "/whatmusic/static/js/main.3b16595c.js.map",
+    "787.a7935d46.chunk.js.map": "/whatmusic/static/js/787.a7935d46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bafd3227.css",
-    "static/js/main.96a3fc1b.js"
+    "static/css/main.79eb277c.css",
+    "static/js/main.3b16595c.js"
   ]
 }
