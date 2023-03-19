@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Bohdan-Podponarovskyi/whatmusic/static/css/main.bafd3227.css",
-    "main.js": "/Bohdan-Podponarovskyi/whatmusic/static/js/main.d3f74699.js",
+    "main.js": "/Bohdan-Podponarovskyi/whatmusic/static/js/main.96a3fc1b.js",
     "static/js/787.a7935d46.chunk.js": "/Bohdan-Podponarovskyi/whatmusic/static/js/787.a7935d46.chunk.js",
     "static/media/Yomogi-Regular.ttf": "/Bohdan-Podponarovskyi/whatmusic/static/media/Yomogi-Regular.b23d0b66f3cd12f0ed5c.ttf",
     "static/media/bg-dark.png": "/Bohdan-Podponarovskyi/whatmusic/static/media/bg-dark.28cb8d9499eee758b20d.png",
@@ -16,11 +16,11 @@
     "index.html": "/Bohdan-Podponarovskyi/whatmusic/index.html",
     "static/media/logo.svg": "/Bohdan-Podponarovskyi/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
     "main.bafd3227.css.map": "/Bohdan-Podponarovskyi/whatmusic/static/css/main.bafd3227.css.map",
-    "main.d3f74699.js.map": "/Bohdan-Podponarovskyi/whatmusic/static/js/main.d3f74699.js.map",
+    "main.96a3fc1b.js.map": "/Bohdan-Podponarovskyi/whatmusic/static/js/main.96a3fc1b.js.map",
     "787.a7935d46.chunk.js.map": "/Bohdan-Podponarovskyi/whatmusic/static/js/787.a7935d46.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bafd3227.css",
-    "static/js/main.d3f74699.js"
+    "static/js/main.96a3fc1b.js"
   ]
 }
