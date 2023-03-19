@@ -20,8 +20,8 @@ const TopTenResults = (props) => {
     useEffect( () => {
             console.log('Before API request', topTenTracks);
             // axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
-            axios.get(`/api/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
-            // axios.get(`https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
+            // axios.get(`/api/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
+            axios.get(`https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page_size=10&page=1&country=ua&f_has_lyrics=1&apikey=${process.env.REACT_APP_API_KEY}`)
                 .then(response => {
                     if (response.data.message.body.track_list.length === 0) {
                         setError(error);

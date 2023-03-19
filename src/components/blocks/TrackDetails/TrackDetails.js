@@ -130,10 +130,12 @@ const TrackDetails = (props) => {
 
     useEffect(() => {
         const trackLyricsPromise = axios.get(
-            `/api/ws/1.1/track.lyrics.get?commontrack_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`
+            // `/api/ws/1.1/track.lyrics.get?commontrack_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`
+            `https://api.musixmatch.com/ws/1.1/track.lyrics.get?commontrack_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`
         );
         const trackDetailsPromise = axios.get(
-            `/api/ws/1.1/track.get?commontrack_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`
+            // `/api/ws/1.1/track.get?commontrack_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`
+            `https://api.musixmatch.com/ws/1.1/track.get?commontrack_id=${trackId}&apikey=${process.env.REACT_APP_API_KEY}`
         );
 
         Promise.all([trackLyricsPromise, trackDetailsPromise])
