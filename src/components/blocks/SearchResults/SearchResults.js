@@ -61,8 +61,13 @@ import Track from '../../elements/Track/Track';
 import axios from "axios";
 import './SearchResults.scss';
 import { ContentWrapper } from "../../elements/ContentWrapper/ContentWrapper";
+import LoadingSpinner from "../../elements/LoadingSpinner/LoadingSpinner";
+import Error from "../Error/Error";
 
 const SearchResults = () => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
     const [searchResults, setSearchResults] = useState([]);
     const [noTracksFound, setNoTracksFound] = useState('');
 
@@ -81,26 +86,38 @@ const SearchResults = () => {
                 if (tracksList?.length > 0) {
                     setSearchResults(tracksList);
                     console.log('from SearchResult_tracksList', tracksList);
+                    setIsLoading(false);
                 } else {
                     setNoTracksFound('No results found');
                     console.log('No results found');
+                    setIsLoading(false);
                 }
             })
             .catch((error) => {
                 console.log(error);
+                setError(error);
+                setIsLoading(false);
             });
     }, []);
 
+    if (isLoading) {
+        return <LoadingSpinner />;
+    }
+
+    if (error) {
+        return <Error />;
+    }
+
     return (
-            <ContentWrapper specialClass="query-results">
-                {searchResults.length > 0 ? (
-                    searchResults.map(track => (
-                        <Link key={track.track.commontrack_id} to={`/lyrics?id=${track.track.commontrack_id}`} className="query-results__unit">
-                            <Track trackDetails={track.track}></Track>
-                        </Link>
-                    ))
-                ) : (<p>{noTracksFound}</p>)}
-            </ContentWrapper>
+        <ContentWrapper specialClass="query-results">
+            {searchResults.length > 0 ? (
+                searchResults.map(track => (
+                    <Link key={track.track.commontrack_id} to={`/lyrics?id=${track.track.commontrack_id}`} className="query-results__unit">
+                        <Track trackDetails={track.track}></Track>
+                    </Link>
+                ))
+            ) : (<p>{noTracksFound}</p>)}
+        </ContentWrapper>
     );
 };
 
