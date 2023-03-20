@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/whatmusic/static/css/main.9b0d7b17.css",
-    "main.js": "/whatmusic/static/js/main.1c2dda09.js",
+    "main.css": "/whatmusic/static/css/main.9c63d923.css",
+    "main.js": "/whatmusic/static/js/main.bed802d6.js",
     "static/js/787.a7935d46.chunk.js": "/whatmusic/static/js/787.a7935d46.chunk.js",
     "static/media/Yomogi-Regular.ttf": "/whatmusic/static/media/Yomogi-Regular.b23d0b66f3cd12f0ed5c.ttf",
     "static/media/bg-dark.png": "/whatmusic/static/media/bg-dark.28cb8d9499eee758b20d.png",
@@ -15,12 +15,12 @@
     "static/media/search_button_bg.png": "/whatmusic/static/media/search_button_bg.71282d302a7524d9a6da.png",
     "index.html": "/whatmusic/index.html",
     "static/media/logo.svg": "/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
-    "main.9b0d7b17.css.map": "/whatmusic/static/css/main.9b0d7b17.css.map",
-    "main.1c2dda09.js.map": "/whatmusic/static/js/main.1c2dda09.js.map",
+    "main.9c63d923.css.map": "/whatmusic/static/css/main.9c63d923.css.map",
+    "main.bed802d6.js.map": "/whatmusic/static/js/main.bed802d6.js.map",
     "787.a7935d46.chunk.js.map": "/whatmusic/static/js/787.a7935d46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b0d7b17.css",
-    "static/js/main.1c2dda09.js"
+    "static/css/main.9c63d923.css",
+    "static/js/main.bed802d6.js"
   ]
 }
