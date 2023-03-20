@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/whatmusic/static/css/main.9c63d923.css",
-    "main.js": "/whatmusic/static/js/main.36e0945f.js",
+    "main.css": "/whatmusic/static/css/main.3e853f98.css",
+    "main.js": "/whatmusic/static/js/main.041d8184.js",
     "static/js/787.a7935d46.chunk.js": "/whatmusic/static/js/787.a7935d46.chunk.js",
     "static/media/Yomogi-Regular.ttf": "/whatmusic/static/media/Yomogi-Regular.b23d0b66f3cd12f0ed5c.ttf",
-    "static/media/bg-dark.png": "/whatmusic/static/media/bg-dark.28cb8d9499eee758b20d.png",
-    "static/media/bg-light.png": "/whatmusic/static/media/bg-light.5693dee2043bdf1083c3.png",
     "static/media/Ubuntu-Italic.ttf": "/whatmusic/static/media/Ubuntu-Italic.fbb3310412795b02afc4.ttf",
     "static/media/Ubuntu-Regular.ttf": "/whatmusic/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Bold.ttf": "/whatmusic/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
-    "static/media/search_input_bg.png": "/whatmusic/static/media/search_input_bg.6f672839b40eb7609f76.png",
     "static/media/Bungee-Regular.ttf": "/whatmusic/static/media/Bungee-Regular.3d95fa68283102c29cd9.ttf",
+    "static/media/search_input_bg.webp": "/whatmusic/static/media/search_input_bg.79deed1316b307ed5d4a.webp",
+    "static/media/bg-light.webp": "/whatmusic/static/media/bg-light.930e866db2a3c8054e06.webp",
     "static/media/ZenDots-Regular.ttf": "/whatmusic/static/media/ZenDots-Regular.ad9e0d65654bb49213b6.ttf",
-    "static/media/search_button_bg.png": "/whatmusic/static/media/search_button_bg.71282d302a7524d9a6da.png",
+    "static/media/bg-dark.webp": "/whatmusic/static/media/bg-dark.633fa35cf1a9d016f8aa.webp",
+    "static/media/search_button_bg.webp": "/whatmusic/static/media/search_button_bg.150747843d626980cb5f.webp",
     "index.html": "/whatmusic/index.html",
     "static/media/logo.svg": "/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
-    "main.9c63d923.css.map": "/whatmusic/static/css/main.9c63d923.css.map",
-    "main.36e0945f.js.map": "/whatmusic/static/js/main.36e0945f.js.map",
+    "main.3e853f98.css.map": "/whatmusic/static/css/main.3e853f98.css.map",
+    "main.041d8184.js.map": "/whatmusic/static/js/main.041d8184.js.map",
     "787.a7935d46.chunk.js.map": "/whatmusic/static/js/787.a7935d46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c63d923.css",
-    "static/js/main.36e0945f.js"
+    "static/css/main.3e853f98.css",
+    "static/js/main.041d8184.js"
   ]
 }
