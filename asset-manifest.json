@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/whatmusic/static/css/main.07ea4119.css",
-    "main.js": "/whatmusic/static/js/main.041d8184.js",
+    "main.js": "/whatmusic/static/js/main.d81a6253.js",
     "static/js/787.a7935d46.chunk.js": "/whatmusic/static/js/787.a7935d46.chunk.js",
     "static/media/Ubuntu-Italic.ttf": "/whatmusic/static/media/Ubuntu-Italic.fbb3310412795b02afc4.ttf",
     "static/media/Ubuntu-Regular.ttf": "/whatmusic/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
@@ -15,11 +15,11 @@
     "index.html": "/whatmusic/index.html",
     "static/media/logo.svg": "/whatmusic/static/media/logo.1f203f3b5eae356eca7c6ca56bb6b564.svg",
     "main.07ea4119.css.map": "/whatmusic/static/css/main.07ea4119.css.map",
-    "main.041d8184.js.map": "/whatmusic/static/js/main.041d8184.js.map",
+    "main.d81a6253.js.map": "/whatmusic/static/js/main.d81a6253.js.map",
     "787.a7935d46.chunk.js.map": "/whatmusic/static/js/787.a7935d46.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07ea4119.css",
-    "static/js/main.041d8184.js"
+    "static/js/main.d81a6253.js"
   ]
 }
