@@ -2,11 +2,45 @@
 
   &__unit {
     flex-basis: calc(50% - 1vw);
+
+    @media screen and (max-width: 425px) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__not-found, &__title {
+    font-family: var(--nav-text);
+    text-align: center;
+    flex-basis: 100%;
+    text-transform: uppercase;
   }
 
   &__not-found {
-    flex-basis: 100%;
-    text-align: center;
+
     color: var(--color-orange);
+  }
+
+  &__title {
+    flex-basis: 100%;
+    margin: 20px 0;
+    color: var(--color-orange);
+    display: flex;
+  }
+
+  &__title {
+    justify-content: space-between;
+
+    &-top-ten {
+      justify-content: center;
+    }
+  }
+
+  &__pagination {
+    //padding-top: 15px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-basis: 100%;
+    justify-content: center;
   }
 }

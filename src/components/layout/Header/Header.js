@@ -8,7 +8,7 @@ function Header() {
 
     return(
         <div className="header">
-            <Logo></Logo>
+            <Logo />
             <TopTenButton />
         </div>
     )

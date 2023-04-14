@@ -5,6 +5,10 @@
   }
 
   &__image {
-    max-width: 10vw;
+    max-width: 150px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100px;
+    }
   }
 }

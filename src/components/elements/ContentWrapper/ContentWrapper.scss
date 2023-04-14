@@ -1,13 +1,21 @@
 .content-wrapper {
-  font-family: var(--nav-text);
   position: relative;
-  padding: 3vw;
+  padding: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0 auto;
   gap: 3px;
   justify-content: center;
+
+  &:last-child button {
+    margin-top: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
 
   &:after {
     content: '';

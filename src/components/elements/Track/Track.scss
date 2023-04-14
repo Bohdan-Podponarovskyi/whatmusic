@@ -2,7 +2,6 @@
   background: rgba(223, 224, 228, 0.1);
   color: var(--color-white-default);
   padding: 10px 15px;
-  //max-height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,13 +29,22 @@
     text-overflow: ellipsis;
     text-align: center;
     font-family: var(--secondary-text);
+    line-height: 25px;
+
+    @media screen and (max-width: 425px) {
+      max-width: 70vw;
+    }
 
 
     &--artist {
-      font-family: var(--primary-text);
       font-style: italic;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 23px;
     }
   }
+}
+
+.track-lyrics .track-details__unit {
+  overflow: visible;
+  white-space: normal;
 }

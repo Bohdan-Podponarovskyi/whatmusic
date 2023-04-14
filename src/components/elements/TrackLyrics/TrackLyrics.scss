@@ -1,5 +1,8 @@
 .track-lyrics {
   width: 100%;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
 
   &__desc {
     background: rgba(223, 224, 228, 0.1);

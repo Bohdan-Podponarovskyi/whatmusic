@@ -5,14 +5,29 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: 25vh;
   transform: translate(-50%, -50%);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   font-size: 80px;
   line-height: 96px;
 
+  &:last-child button {
+    margin-top: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
   &__first-line {
     margin-bottom: 35px;
     font-size: 150px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 50px;
+      line-height: 55px;
+    }
   }
 }

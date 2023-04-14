@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const GoBackButton = (props) => {
-    const { isDarkMode } = props;
+    const { theme } = props;
     const navigate = useNavigate();
 
     const handleGoBack = () => {
@@ -10,7 +10,7 @@ const GoBackButton = (props) => {
     };
 
     return (
-        <button className={`button button__text button__go-back ${isDarkMode ? 'button--dark' : 'button--light'}`} onClick={handleGoBack}>Go back</button>
+        <button className={`button button__text button__go-back button--${theme}`} onClick={handleGoBack}><span className="button__text">Go back</span></button>
     );
 };
 

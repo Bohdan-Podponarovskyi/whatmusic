@@ -1,16 +1,16 @@
 import React from 'react';
 
 const TrackLyrics = (props) => {
+    const { trackGenre, trackLyrics } = props;
+    // console.log(trackLyrics.lyrics_body)
+
     return (
         <div className="track-lyrics__desc">
             <p className="track-lyrics__desc-title">Genre</p>
-            <p>{props.trackGenre}</p>
+            <p>{trackGenre}</p>
             <p className="track-lyrics__desc-title">Lyrics</p>
-            {/*{props.trackLyrics.lyrics_body !== "" && (*/}
-            {/*    <p>{props.trackLyrics.lyrics_body}</p>*/}
-            {/*)}*/}
-            {props.trackLyrics.lyrics_body && props.trackLyrics.lyrics_body !== "" ? (
-                <p>{props.trackLyrics.lyrics_body}</p>
+            {trackLyrics && trackLyrics.lyrics_body !== undefined && trackLyrics.lyrics_body !== "" ? (
+                <pre>{trackLyrics.lyrics_body}</pre>
             ) : (
                 <p>No information</p>
             )}

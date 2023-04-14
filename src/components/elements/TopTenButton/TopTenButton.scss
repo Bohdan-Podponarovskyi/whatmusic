@@ -3,13 +3,14 @@
   &__link {
     text-transform: uppercase;
     font-family: var(--nav-text);
-
-    font-size: 1.944vw;
-    line-height: 2.361vw;
+    font-size: 28px;
+    line-height: 34px;
     color: var(--color-white);
+    display: block;
 
     &:hover {
       color: var(--color-orange);
+      transform: scale(1.1);
     }
 
     &:focus {
